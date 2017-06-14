@@ -13,7 +13,7 @@
 	}	
 	
 	header {
-		background: rgba(255,255,255,0.45);
+		background: rgba(255,255,255,1);
 		width: 100%;
 		z-index: 1000;
 		box-shadow: -20px 0px 50px #000;
@@ -23,24 +23,29 @@
 		width: 225px;
 	}
 	.hero {
-		height: 8em;
+		height: 25em;
 		width: 100%;
 	}
 	.enumclaw {
+		padding-top: 5%;
 		background: url(img/background-trees.jpg);
 		background-size: cover;
 		background-attachment: fixed;
+		background-repeat: no-repeat;
+		background-position: top;
 		color: white;
 		font-family: 'Roboto Condensed', Helvetica, Arial, sans-serif;
 		font-weight: 700;
 		text-transform: uppercase;
 		font-size: 10em;
+		overflow: hidden;
+		height: 3em;
 	}
 	.enumclawis {
 		text-align: center;
 	}
 	.kael {
-		background: blue;
+		background: white;
 	}
 	.blurred-bg{
 
@@ -51,6 +56,7 @@
 	background-repeat:no-repeat;
 	@include background-size(cover);
 	background-attachment: fixed;
+		background-position: top;
 	}
 	.jquerytext {
 		display: none;
@@ -62,9 +68,9 @@
 </head>
 
 <body>
-<header class="blurred-bg">
+<header>
 <div class="imgheader">
-<img src="img/logo-kael-white.png" alt="Vote Kael" width="225px" style="margin: 0 auto;">
+<img src="img/logo-kael.png" alt="Vote Kael" width="225px" style="margin: 0 auto;">
 </div>
 </header>
 <div class="hero enumclaw">
