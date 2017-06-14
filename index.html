@@ -1,0 +1,103 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Vote Kael</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<link href="https://fonts.googleapis.com/css?family=Gochi+Hand|Roboto|Roboto+Condensed:700" rel="stylesheet">
+<style>
+	body {
+		background: grey;
+		margin: 0;
+		padding: 0;
+	}	
+	
+	header {
+		background: rgba(255,255,255,0.45);
+		width: 100%;
+		z-index: 1000;
+		box-shadow: -20px 0px 50px #000;
+	}
+	.imgheader {
+		margin: 0 auto;
+		width: 225px;
+	}
+	.hero {
+		height: 8em;
+		width: 100%;
+	}
+	.enumclaw {
+		background: url(img/background-trees.jpg);
+		background-size: cover;
+		background-attachment: fixed;
+		color: white;
+		font-family: 'Roboto Condensed', Helvetica, Arial, sans-serif;
+		font-weight: 700;
+		text-transform: uppercase;
+		font-size: 10em;
+	}
+	.enumclawis {
+		text-align: center;
+	}
+	.kael {
+		background: blue;
+	}
+	.blurred-bg{
+
+	background-image:  linear-gradient(
+      rgba(0, 0, 0, 0.15), 
+      rgba(0, 0, 0, 0.15)
+    ), url(img/background-trees-blurred.jpg);
+	background-repeat:no-repeat;
+	@include background-size(cover);
+	background-attachment: fixed;
+	}
+	.jquerytext {
+		display: none;
+		font-size: 2.2em;
+		margin-top: -0.5em;
+		opacity: 0.5;
+	}
+	</style>
+</head>
+
+<body>
+<header class="blurred-bg">
+<div class="imgheader">
+<img src="img/logo-kael-white.png" alt="Vote Kael" width="225px" style="margin: 0 auto;">
+</div>
+</header>
+<div class="hero enumclaw">
+	<div class="enumclawis">Enumclaw
+	<div class="jquerytext">Home</div>
+	<div class="jquerytext">Family</div>
+	<div class="jquerytext">Lovely</div>
+	<div class="jquerytext">Free</div>
+	<div class="jquerytext">Country</div>
+	</div>
+</div>
+<div class="hero kael">
+	
+</div>
+
+<script>
+	(function() {
+
+    var quotes = $(".jquerytext");
+    var quoteIndex = -1;
+    
+    function showNextQuote() {
+        ++quoteIndex;
+        quotes.eq(quoteIndex % quotes.length)
+            .fadeIn(2000)
+            .delay(2000)
+            .fadeOut(2000, showNextQuote);
+    }
+    
+    showNextQuote();
+    
+})();
+	
+	</script>
+</body>
+</html>
