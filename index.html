@@ -1,164 +1,206 @@
 <!doctype html>
 <html>
+
 <head>
-<meta charset="UTF-8">
-<title>Vote Kael</title>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-<link href="https://fonts.googleapis.com/css?family=Gochi+Hand|Roboto|Roboto+Condensed:700" rel="stylesheet">
-<style>
-	body {
-		background: grey;
-		margin: 0;
-		padding: 0;
-	}	
-	/* Header */
-	header {
-		background: rgba(255,255,255,1);
-		width: 100%;
-		z-index: 1000;
-		box-shadow: -20px 0px 50px #000;
-	}
-	.imgheader {
-		margin: 0 auto;
-		width: 225px;
-	}
-	.imgheader img {
-		width: 100%;
-	}
-	.blurred-bg{
-	background-image:  linear-gradient(
-      rgba(0, 0, 0, 0.15), 
-      rgba(0, 0, 0, 0.15)
-    ), url(img/background-trees-blurred.jpg);
-	background-repeat:no-repeat;
-	@include background-size(cover);
-	background-attachment: fixed;
-		background-position: top;
-	}
-	@media screen and (max-width: 960px) {
+	<meta charset="UTF-8">
+	<title>Vote Kael</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<link href="https://fonts.googleapis.com/css?family=Gochi+Hand|Roboto|Roboto+Condensed:100+700" rel="stylesheet">
+	<style>
+		body {
+			background: grey;
+			margin: 0;
+			padding: 0;
+		}
+		/* Header */
+
+		header {
+			background: rgba(255, 255, 255, 1);
+			width: 100%;
+			z-index: 1000;
+			box-shadow: -20px 0px 50px #000;
+		}
+
+		.imgheader {
+			margin: 0 auto;
+			width: 225px;
+		}
+
+		.imgheader img {
+			width: 100%;
+		}
+
+		.blurred-bg {
+			background-image: linear-gradient( rgba(0, 0, 0, 0.15),
+			rgba(0, 0, 0, 0.15)), url(img/background-trees-blurred.jpg);
+			background-repeat: no-repeat;
+			@include background-size(cover);
+			background-attachment: fixed;
+			background-position: top;
+		}
+
+		@media screen and (max-width: 960px) {
 			header {
-				background: rgba(255,255,255,0.75);
+				background: rgba(255, 255, 255, 0.75);
 				width: 100%;
 				z-index: 1000;
 				box-shadow: -20px 0px 50px #000;
 				position: fixed;
 				height: 125px;
-				
 			}
 			.imgheader {
 				margin: 0 auto;
 				width: 180px;
 			}
-	}
-	/* Heros */
-	.hero {
-		height: 40em;
-		width: 100%;
-	}
-	/* Enumclaw Hero */
-	.enumclaw {
-		padding-top: 5%;
-		background: url(img/background-trees.jpg);
-		background-size: cover;
-		background-attachment: fixed;
-		background-repeat: no-repeat;
-		background-position: top;
-		color: white;
-		font-family: 'Roboto Condensed', Helvetica, Arial, sans-serif;
-		font-weight: 700;
-		text-transform: uppercase;
-		font-size: 10em;
-		overflow: hidden;
-		height: 3em;
-	}
-	.enumclawis {
-		text-align: center;
-		text-shadow: 0px 3px 8px rgba(0,0,0,0.45);
-	}
-		.jquerytext {
-		display: none;
-		font-size: 2.2em;
-		margin-top: -0.5em;
-		opacity: 0.5;
-		text-shadow: none;
-	}
-	@media screen and (max-width: 960px) {
-		.enumclaw {
-			padding-top: 2.5em;
-			font-size: 5em;
-			height: 2.5em;
 		}
-			.enumclawis {
+		/* Heros */
+
+		.hero {
+			height: 40em;
+			width: 100%;
+		}
+		/* Enumclaw Hero */
+
+		.enumclaw {
+			padding-top: 5%;
+			background: url(img/background-trees.jpg);
+			background-size: cover;
+			background-attachment: fixed;
+			background-repeat: no-repeat;
+			background-position: top;
+			color: white;
+			font-family: 'Roboto Condensed', Helvetica, Arial, sans-serif;
+			font-weight: 700;
+			text-transform: uppercase;
+			font-size: 10em;
+			overflow: hidden;
+			height: 3em;
+		}
+
+		.enumclawis {
 			text-align: center;
-			text-shadow: 0px 3px 8px rgba(0,0,0,0.45);
-			}
-			.jquerytext {
+			text-shadow: 0px 3px 8px rgba(0, 0, 0, 0.45);
+		}
+
+		.subtitle {
 			display: none;
-			font-size: 1.25em;
+			font-size: 2.2em;
 			margin-top: -0.5em;
 			opacity: 0.5;
 			text-shadow: none;
+		}
+
+		@media screen and (max-width: 960px) {
+			.enumclaw {
+				padding-top: 2.5em;
+				font-size: 5em;
+				height: 2.5em;
 			}
-	}
-	/* Kael Hero */
-	.kael {
-		background: linear-gradient(rgba(255,255,255,0),rgba(255,255,255,1)), url(img/background-kael.jpg);
-		background-size: cover;
-		background-position: center;
-		/* background-attachment: fixed; */
-	}
-	/* video Hero */
-	.video {
-		background: white;
-		min-height: 23.5em;
-		background-size: cover;
-		background-position: center;
-		background-attachment: fixed;
-	}
+			.enumclawis {
+				text-align: center;
+				text-shadow: 0px 3px 8px rgba(0, 0, 0, 0.45);
+			}
+			.subtitle {
+				display: none;
+				font-size: 1.25em;
+				margin-top: -0.5em;
+				opacity: 0.5;
+				text-shadow: none;
+			}
+		}
+		/* Kael Hero */
+
+		.kael {
+			background: linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 1)), url(img/background-kael.jpg);
+			background-size: cover;
+			background-position: center;
+			/* background-attachment: fixed; */
+		}
+
+		.kaelstory {
+			padding: 5% 10% 5% 50%;
+			width: 40%;
+			max-width: 35em;
+			font-family: 'Roboto Condensed', Helvetica, Arial, sans-serif;
+		}
+		@media screen and (max-width: 960px) {
+				.kael {
+					height: auto;
+				}
+				.kaelstory {
+					padding: 5% 10%;
+					width: 80%;
+					max-width: 80%;
+				}
+
+		}
+		/* video Hero */
+
+		.video {
+			background: white;
+			min-height: 23.5em;
+			background-size: cover;
+			background-position: center;
+			background-attachment: fixed;
+		}
 	</style>
 </head>
 
 <body>
-<header>
-<div class="imgheader">
-<img src="img/logo-kael.png" alt="Vote Kael">
-</div>
-</header>
-<div class="hero enumclaw">
-	<div class="enumclawis">Enumclaw
-	<div class="jquerytext">Home</div>
-	<div class="jquerytext">Family</div>
-	<div class="jquerytext">Lovely</div>
-	<div class="jquerytext">Free</div>
-	<div class="jquerytext">Country</div>
+	<header>
+		<h1 class="imgheader">
+			<img src="img/logo-kael.png" alt="Vote Kael">
+		</h1>
+	</header>
+	<div class="hero enumclaw">
+		<div class="enumclawis">Enumclaw
+			<div class="subtitle">Home</div>
+			<div class="subtitle">Family</div>
+			<div class="subtitle">Lovely</div>
+			<div class="subtitle">Free</div>
+			<div class="subtitle">Country</div>
+		</div>
 	</div>
-</div>
-<div class="hero kael">
-	
-</div>
-<div class="hero video">
-	<div style="margin:0 auto; text-align: center; width: 100%;">
-	<img src="img/youtube.jpg" style="width: 35%; margin: 4em 0 1em 0;">
+	<div class="hero kael">
+		<div class="kaelstory">
+			<p>Enumclaw,</p>
+			<p>There is something magical about this town - something only a lucky few of us get to partake in every day.</p>
+			<p>Waking up to fertile farmlands surrounded by towering evergreen trees - framed perfectly by our previous rolling foothills
+				and as always kept watch by the awe-inspiring, snow covered Rainier. The smell of a left over rainstorm mixed with fresh
+				fertilized fields can only be admired by us locals. Enumclaw is more than a place to live, it's a place where people
+				live together. A town where grocery shopping is the same as social hour, where following a tractor is part of the daily
+				commute, and a place where kids can still ride on their bikes downtown. <strong>I love Enumclaw.</strong> I love knowing
+				the names of our police officers, waiters, store checkers, I love the fact that life here runs just a little bit slower.
+				We take our time – we focus on our community. Enumclaw is a town strife with strong values, morals unique character.
+				Good ol' hardworking people who are waiting with helping hands. There is a reason why very few leave this town and why
+				most of them tend to come back. There's something magical about this place and I'm proud I get to spend my life here
+				in the Claw.
+			</p>
+		</div>
 	</div>
-</div>
-<script>
-	(function() {
+	<div class="hero video">
+		<div style="margin:0 auto; text-align: center; width: 100%;">
+			<img src="img/youtube.jpg" style="width: 35%; margin: 4em 0 1em 0;">
+		</div>
+	</div>
+	<script>
+		(function () {
 
-    var quotes = $(".jquerytext");
-    var quoteIndex = -1;
-    
-    function showNextQuote() {
-        ++quoteIndex;
-        quotes.eq(quoteIndex % quotes.length)
-            .fadeIn(2000)
-            .delay(2000)
-            .fadeOut(2000, showNextQuote);
-    }
-    
-    showNextQuote();
-    
-})();
-	
+			var quotes = $(".subtitle");
+			var quoteIndex = -1;
+
+			function showNextQuote() {
+				++quoteIndex;
+				quotes.eq(quoteIndex % quotes.length)
+					.fadeIn(2000)
+					.delay(2000)
+					.fadeOut(2000, showNextQuote);
+			}
+
+			showNextQuote();
+
+		})();
 	</script>
 </body>
+
 </html>
