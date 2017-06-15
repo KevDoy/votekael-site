@@ -11,7 +11,7 @@
 		margin: 0;
 		padding: 0;
 	}	
-	
+	/* Header */
 	header {
 		background: rgba(255,255,255,1);
 		width: 100%;
@@ -22,10 +22,40 @@
 		margin: 0 auto;
 		width: 225px;
 	}
-	.hero {
-		height: 25em;
+	.imgheader img {
 		width: 100%;
 	}
+	.blurred-bg{
+	background-image:  linear-gradient(
+      rgba(0, 0, 0, 0.15), 
+      rgba(0, 0, 0, 0.15)
+    ), url(img/background-trees-blurred.jpg);
+	background-repeat:no-repeat;
+	@include background-size(cover);
+	background-attachment: fixed;
+		background-position: top;
+	}
+	@media screen and (max-width: 960px) {
+			header {
+				background: rgba(255,255,255,0.75);
+				width: 100%;
+				z-index: 1000;
+				box-shadow: -20px 0px 50px #000;
+				position: fixed;
+				height: 125px;
+				
+			}
+			.imgheader {
+				margin: 0 auto;
+				width: 180px;
+			}
+	}
+	/* Heros */
+	.hero {
+		height: 40em;
+		width: 100%;
+	}
+	/* Enumclaw Hero */
 	.enumclaw {
 		padding-top: 5%;
 		background: url(img/background-trees.jpg);
@@ -45,26 +75,45 @@
 		text-align: center;
 		text-shadow: 0px 3px 8px rgba(0,0,0,0.45);
 	}
-	.kael {
-		background: white;
-	}
-	.blurred-bg{
-
-	background-image:  linear-gradient(
-      rgba(0, 0, 0, 0.15), 
-      rgba(0, 0, 0, 0.15)
-    ), url(img/background-trees-blurred.jpg);
-	background-repeat:no-repeat;
-	@include background-size(cover);
-	background-attachment: fixed;
-		background-position: top;
-	}
-	.jquerytext {
+		.jquerytext {
 		display: none;
 		font-size: 2.2em;
 		margin-top: -0.5em;
 		opacity: 0.5;
 		text-shadow: none;
+	}
+	@media screen and (max-width: 960px) {
+		.enumclaw {
+			padding-top: 2.5em;
+			font-size: 5em;
+			height: 2.5em;
+		}
+			.enumclawis {
+			text-align: center;
+			text-shadow: 0px 3px 8px rgba(0,0,0,0.45);
+			}
+			.jquerytext {
+			display: none;
+			font-size: 1.25em;
+			margin-top: -0.5em;
+			opacity: 0.5;
+			text-shadow: none;
+			}
+	}
+	/* Kael Hero */
+	.kael {
+		background: linear-gradient(rgba(255,255,255,0),rgba(255,255,255,1)), url(img/background-kael.jpg);
+		background-size: cover;
+		background-position: center;
+		/* background-attachment: fixed; */
+	}
+	/* video Hero */
+	.video {
+		background: white;
+		min-height: 23.5em;
+		background-size: cover;
+		background-position: center;
+		background-attachment: fixed;
 	}
 	</style>
 </head>
@@ -72,7 +121,7 @@
 <body>
 <header>
 <div class="imgheader">
-<img src="img/logo-kael.png" alt="Vote Kael" width="225px" style="margin: 0 auto;">
+<img src="img/logo-kael.png" alt="Vote Kael">
 </div>
 </header>
 <div class="hero enumclaw">
@@ -87,7 +136,11 @@
 <div class="hero kael">
 	
 </div>
-
+<div class="hero video">
+	<div style="margin:0 auto; text-align: center; width: 100%;">
+	<img src="img/youtube.jpg" style="width: 35%; margin: 4em 0 1em 0;">
+	</div>
+</div>
 <script>
 	(function() {
 
