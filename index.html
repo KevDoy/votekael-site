@@ -12,6 +12,15 @@
 			margin: 0;
 			padding: 0;
 		}
+		.noselect {
+  -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome and Opera */
+}
 		/* Header */
 
 		header {
@@ -63,13 +72,13 @@
 
 		.enumclaw {
 			padding-top: 5%;
-			background: url(img/background-trees.jpg);
+			background: url(img/background-trees-2.jpg);
 			background-size: cover;
 			background-attachment: fixed;
 			background-repeat: no-repeat;
 			background-position: top;
 			color: white;
-			font-family: 'Roboto Condensed', Helvetica, Arial, sans-serif;
+			font-family: 'Roboto', Helvetica, Arial, sans-serif;
 			font-weight: 700;
 			text-transform: uppercase;
 			font-size: 10em;
@@ -92,8 +101,8 @@
 
 		@media screen and (max-width: 960px) {
 			.enumclaw {
-				padding-top: 2.5em;
-				font-size: 5em;
+				padding-top: 2.75em;
+				font-size: 4em;
 				height: 2.5em;
 			}
 			.enumclawis {
@@ -111,9 +120,11 @@
 		/* Kael Hero */
 
 		.kael {
+			padding-top: 5%;
 			background: linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 1)), url(img/background-kael.jpg);
 			background-size: cover;
 			background-position: center;
+			font-family: 'Roboto Condensed', Helvetica, Arial, sans-serif;
 			/* background-attachment: fixed; */
 		}
 
@@ -121,7 +132,22 @@
 			padding: 5% 10% 5% 50%;
 			width: 40%;
 			max-width: 35em;
-			font-family: 'Roboto Condensed', Helvetica, Arial, sans-serif;
+		}
+		.kaelstory p {
+			background: black;
+			opacity: 0.4
+		}
+		.profilepic {
+			margin: 1.5em auto 0 auto;
+			width: 15em;
+			height: 15em;
+			border-radius: 100%;
+			background: url(img/profilepic-test.jpg);
+			background-position: center;
+			background-size: cover;
+			box-shadow: 0 3px 3px rgba(0,0,0,0.5);
+			display: none;
+			visibility: hidden;
 		}
 		@media screen and (max-width: 960px) {
 				.kael {
@@ -132,6 +158,10 @@
 					width: 80%;
 					max-width: 80%;
 				}
+			.profilepic {
+				display: block;
+			visibility: visible;
+			}
 
 		}
 		/* video Hero */
@@ -148,11 +178,11 @@
 
 <body>
 	<header>
-		<h1 class="imgheader">
-			<img src="img/logo-kael.png" alt="Vote Kael">
+		<h1 class="imgheader noselect">
+			<img src="img/logo-kael-2.png" alt="Vote Kael">
 		</h1>
 	</header>
-	<div class="hero enumclaw">
+	<div class="hero enumclaw noselect">
 		<div class="enumclawis">Enumclaw
 			<div class="subtitle">Home</div>
 			<div class="subtitle">Family</div>
@@ -162,6 +192,7 @@
 		</div>
 	</div>
 	<div class="hero kael">
+		<div class="profilepic mobile"></div>
 		<div class="kaelstory">
 			<p>Enumclaw,</p>
 			<p>There is something magical about this town - something only a lucky few of us get to partake in every day.</p>
