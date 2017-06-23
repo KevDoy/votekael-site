@@ -10,7 +10,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1" />
 	<style>
 		body {
-			background: grey;
+			background: white;
 			margin: 0;
 			padding: 0;
 		}
@@ -23,6 +23,14 @@
             user-select: none; /* Non-prefixed version, currently
                                   supported by Chrome and Opera */
 }
+		
+		
+		/* Mobile */
+		.mobile {
+			display: none;
+			visibility: hidden;
+			
+		}
 		/* Header */
 
 		header {
@@ -31,7 +39,7 @@
 			z-index: 1000;
 			box-shadow: -20px 0px 50px #000;
 		}
-
+		
 		.imgheader {
 			margin: 0 auto;
 			width: 225px;
@@ -144,35 +152,39 @@
 			width: 15em;
 			height: 15em;
 			border-radius: 100%;
-			background: url(img/profilepic-h.jpg);
+			background: url(img/profilepic.jpg);
 			background-position: center;
 			background-size: cover;
 			box-shadow: 0 3px 3px rgba(0,0,0,0.5);
-			display: none;
-			visibility: hidden;
+
 		}
 		@media screen and (max-width: 960px) {
 				.kael {
-					height: 50em;
+					height: 60em;
 					padding-bottom: 1em;
-					background-image: linear-gradient(rgba(255, 255, 255, 1), rgba(255, 255, 255, 0)), url(img/background-kael-m.jpg);
+					background-position: bottom;
+					background-size: cover;
+					background-image: linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0)), url(img/background-kael-m.jpg);
 				}
-				.kaelstory {
+			.kaelstory {
 					padding: 5% 10%;
 					width: 80%;
 					max-width: 80%;
 				}
 			.profilepic {
-				display: block;
-			visibility: visible;
+				background-image: url(img/profilepic-h.jpg);
 			}
+			.kaelstory p {
+				background: none;
 
 		}
 		/* video Hero */
 
 		.video {
 			background: white;
+			margin-top: 20em;
 			min-height: 23.5em;
+			height: 40em;
 			background-size: cover;
 			background-position: center;
 			background-attachment: fixed;
@@ -208,8 +220,9 @@
 				most of them tend to come back. There's something magical about this place and I'm proud I get to spend my life here
 				in the Claw.
 			</p>
-		</div>
+
 		<!-- <div class="profilepic mobile"></div> -->
+
 	</div>
 	<div class="hero video">
 		<div style="margin:0 auto; text-align: center; width: 100%;">
