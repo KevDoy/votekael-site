@@ -25,7 +25,15 @@
                                   supported by Chrome and Opera */
 }
 		
-		
+		/* Fonts */
+		.titlecase {
+			font-size: 3em;
+			line-height: 1em;
+			margin-bottom: 0;
+		}
+		.cursive {
+			font-family: 'Condiment', cursive;
+		}
 		/* Mobile */
 		.mobile {
 			display: none;
@@ -132,10 +140,11 @@
 
 		.kael {
 			padding-top: 5%;
-			background-image: linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 1)), url(img/background-kael-2.jpg);
+			background-image: linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0)), url(img/background-kael-3.jpg);
 			background-size: cover;
-			background-position: center;
+			background-position: bottom center;
 			font-family: 'Roboto Condensed', Helvetica, Arial, sans-serif;
+			text-shadow: 0 0.1em 1em rgba(255, 255, 255, 1)
 			/* background-attachment: fixed; */
 		}
 
@@ -160,8 +169,7 @@
 		}
 		@media screen and (max-width: 960px) {
 				.kael {
-					height: 70em;
-					padding-bottom: 1em;
+					height: 55em;
 					background-position: bottom;
 					background-size: cover;
 					background-image: linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0)), url(img/background-kael-m.jpg);
@@ -208,20 +216,14 @@
 	</div>
 	<div class="hero kael">
 		<div class="kaelstory">
-			<p>Enumclaw,</p>
-			<p>There is something magical about this town - something only a lucky few of us get to partake in every day.</p>
-			<p>Waking up to fertile farmlands surrounded by towering evergreen trees - framed perfectly by our previous rolling foothills
-				and as always kept watch by the awe-inspiring, snow covered Rainier. The smell of a left over rainstorm mixed with fresh
-				fertilized fields can only be admired by us locals. Enumclaw is more than a place to live, it's a place where people
-				live together. A town where grocery shopping is the same as social hour, where following a tractor is part of the daily
-				commute, and a place where kids can still ride on their bikes downtown. <strong>I love Enumclaw.</strong> I love knowing
-				the names of our police officers, waiters, store checkers, I love the fact that life here runs just a little bit slower.
-				We take our time – we focus on our community. Enumclaw is a town strife with strong values, morals unique character.
-				Good ol' hardworking people who are waiting with helping hands. There is a reason why very few leave this town and why
-				most of them tend to come back. There's something magical about this place and I'm proud I get to spend my life here
-				in the Claw.
+			<p class="titlecase" style="font-weight: 700; letter-spacing: -0.05em; margin: 0 0 0.4em 0;">Enumclaw,</p>
+			<p style="margin-bottom: 0.5em;">There is something magical about this town - something only a lucky few of us get to partake in every day.</p>
+			<p> It's more than a place to live, it's a place where people can live together. A town where grocery shopping
+			is the same as social hour. Where following a tractor is part of the daily commute and a place where Kids can still ride their bikes downtown.
+			<strong>I love Enumclaw.</strong>
 			</p>
-			<p style="font-family: 'Condiment', cursive; font-size: 4em; line-height: 2em; text-align: right">Kael Johnson</p>
+			<p class="titlecase cursive" style="font-size: 4em; margin: 0.5em 0 -0.1em 0; text-align: right">Kael Johnson</p>
+			<p style="text-align: right">Vote for Kael Johnson City Council #3</p>
 
 		<!-- <div class="profilepic mobile"></div> -->
 
