@@ -4,6 +4,7 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Vote Kael</title>
+	<meta name="theme-color" content="#fff">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 	<link href="html5reset.css" rel="stylesheet" type="text/css">
 	<link href="https://fonts.googleapis.com/css?family=Condiment" rel="stylesheet">
@@ -34,6 +35,13 @@
 		.cursive {
 			font-family: 'Condiment', cursive;
 		}
+		@media screen and (max-width: 960px) {
+			.titlecase {
+			font-size: 2em;
+			line-height: 1em;
+			margin-bottom: 0;
+			}
+		}
 		/* Mobile */
 		.mobile {
 			display: none;
@@ -46,7 +54,8 @@
 			background: rgba(255, 255, 255, 1);
 			width: 100%;
 			z-index: 1000;
-			box-shadow: -20px 0px 50px #000;
+			box-shadow: 0 3px 50px #000;
+			border-bottom: 0.1em solid #000;
 		}
 		
 		.imgheader {
@@ -59,8 +68,8 @@
 		}
 
 		.blurred-bg {
-			background-image: linear-gradient( rgba(0, 0, 0, 0.15),
-			rgba(0, 0, 0, 0.15)), url(img/background-trees-blurred.jpg);
+			background-image: linear-gradient( rgba(255, 255, 255, 0.35),
+			rgba(255, 255, 255, 0.35)), url(img/background-trees-2-blur.jpg);
 			background-repeat: no-repeat;
 			@include background-size(cover);
 			background-attachment: fixed;
@@ -69,17 +78,22 @@
 
 		@media screen and (max-width: 960px) {
 			header {
-				background: rgba(255, 255, 255, 0.75);
+				background: rgba(255, 255, 255, .8);
 				width: 100%;
 				z-index: 1000;
 				box-shadow: -20px 0px 50px #000;
 				position: fixed;
-				height: 125px;
+				height: 7.5em;
+				border-bottom: 0.1em solid rgba(255,255,255,1);
+
 			}
 			.imgheader {
 				margin: 0 auto;
-				width: 180px;
+				width: 120px;
 			}
+			.blurred-bg {
+			background-image: none;
+		}
 		}
 		/* Heros */
 
@@ -103,6 +117,7 @@
 			font-size: 10em;
 			overflow: hidden;
 			height: 3em;
+			z-index: 0;
 		}
 
 		.enumclawis {
@@ -112,7 +127,7 @@
 
 		.subtitle {
 			display: none;
-			font-size: 2.2em;
+			font-size: 1.25em;
 			margin-top: -0.25em;
 			opacity: 0.5;
 			text-shadow: none;
@@ -120,8 +135,8 @@
 
 		@media screen and (max-width: 960px) {
 			.enumclaw {
-				padding-top: 2.75em;
-				font-size: 4em;
+				padding-top: 3.75em;
+				font-size: 3em;
 				height: 2.5em;
 			}
 			.enumclawis {
@@ -140,7 +155,7 @@
 
 		.kael {
 			padding-top: 5%;
-			background-image: linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0)), url(img/background-kael-3.jpg);
+			background-image:linear-gradient(to right, rgba(255, 255, 255, 0) , rgba(255, 255, 255, 1)), url(img/background-kael-3.jpg);
 			background-size: cover;
 			background-position: bottom center;
 			font-family: 'Roboto Condensed', Helvetica, Arial, sans-serif;
@@ -153,9 +168,7 @@
 			width: 40%;
 			max-width: 35em;
 		}
-		.kaelstory p {
-			
-		}
+
 		.profilepic {
 			margin: 1.5em auto 0 auto;
 			width: 15em;
@@ -182,18 +195,12 @@
 			.profilepic {
 				background-image: url(img/profilepic-h.jpg);
 			}
-			.kaelstory p {
-				background: none;
-				opacity: 1;
-
-		}
 		/* video Hero */
 
 		.video {
 			background: white;
-			margin-top: 20em;
 			min-height: 23.5em;
-			height: 40em;
+			height: 5em;
 			background-size: cover;
 			background-position: center;
 			background-attachment: fixed;
@@ -202,7 +209,7 @@
 </head>
 
 <body>
-	<header>
+	<header class="blurred-bg">
 		<h1 class="imgheader noselect">
 			<img src="img/logo-kael-2.png" alt="Vote Kael">
 		</h1>
@@ -222,8 +229,8 @@
 			is the same as social hour. Where following a tractor is part of the daily commute and a place where Kids can still ride their bikes downtown.
 			<strong>I love Enumclaw.</strong>
 			</p>
-			<p class="titlecase cursive" style="font-size: 4em; margin: 0.5em 0 -0.1em 0; text-align: right">Kael Johnson</p>
-			<p style="text-align: right">Vote for Kael Johnson City Council #3</p>
+			<p class="titlecase cursive" style="font-size: 3.75em; margin: 0.5em 0 -0.1em 0; text-align: right">Kael Johnson</p>
+			<p style="text-align: right">Vote Kael Johnson City Council #3</p>
 
 		<!-- <div class="profilepic mobile"></div> -->
 
