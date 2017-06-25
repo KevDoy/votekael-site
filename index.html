@@ -16,37 +16,46 @@
 			margin: 0;
 			padding: 0;
 		}
+
 		.noselect {
-  -webkit-touch-callout: none; /* iOS Safari */
-    -webkit-user-select: none; /* Safari */
-     -khtml-user-select: none; /* Konqueror HTML */
-       -moz-user-select: none; /* Firefox */
-        -ms-user-select: none; /* Internet Explorer/Edge */
-            user-select: none; /* Non-prefixed version, currently
+			-webkit-touch-callout: none;
+			/* iOS Safari */
+			-webkit-user-select: none;
+			/* Safari */
+			-khtml-user-select: none;
+			/* Konqueror HTML */
+			-moz-user-select: none;
+			/* Firefox */
+			-ms-user-select: none;
+			/* Internet Explorer/Edge */
+			user-select: none;
+			/* Non-prefixed version, currently
                                   supported by Chrome and Opera */
-}
-		
+		}
 		/* Fonts */
+
 		.titlecase {
 			font-size: 3em;
 			line-height: 1em;
 			margin-bottom: 0;
 		}
+
 		.cursive {
 			font-family: 'Condiment', cursive;
 		}
+
 		@media screen and (max-width: 960px) {
 			.titlecase {
-			font-size: 2em;
-			line-height: 1em;
-			margin-bottom: 0;
+				font-size: 2em;
+				line-height: 1em;
+				margin-bottom: 0;
 			}
 		}
 		/* Mobile */
+
 		.mobile {
 			display: none;
 			visibility: hidden;
-			
 		}
 		/* Header */
 
@@ -55,9 +64,8 @@
 			width: 100%;
 			z-index: 1000;
 			box-shadow: 0 3px 50px #000;
-			border-bottom: 0.1em solid #000;
 		}
-		
+
 		.imgheader {
 			margin: 0 auto;
 			width: 225px;
@@ -84,16 +92,15 @@
 				box-shadow: -20px 0px 50px #000;
 				position: fixed;
 				height: 7.5em;
-				border-bottom: 0.1em solid rgba(255,255,255,1);
-
+				border-bottom: 0.1em solid rgba(255, 255, 255, 1);
 			}
 			.imgheader {
 				margin: 0 auto;
 				width: 120px;
 			}
 			.blurred-bg {
-			background-image: none;
-		}
+				background-image: none;
+			}
 		}
 		/* Heros */
 
@@ -155,11 +162,11 @@
 
 		.kael {
 			padding-top: 5%;
-			background-image:linear-gradient(to right, rgba(255, 255, 255, 0) , rgba(255, 255, 255, 0.75)), url(img/background-kael-3.jpg);
+			background-image: linear-gradient(to right, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.75)), url(img/background-kael-3.jpg);
 			background-size: cover;
 			background-position: bottom center;
 			font-family: 'Roboto Condensed', Helvetica, Arial, sans-serif;
-			text-shadow: 0 0.1em 1em rgba(255, 255, 255, 1)
+			text-shadow: 0 0.1em 1em rgba(255, 255, 255, 1);
 			/* background-attachment: fixed; */
 		}
 
@@ -177,33 +184,45 @@
 			background: url(img/profilepic.jpg);
 			background-position: center;
 			background-size: cover;
-			box-shadow: 0 3px 3px rgba(0,0,0,0.5);
-
+			box-shadow: 0 3px 3px rgba(0, 0, 0, 0.5);
 		}
+
 		@media screen and (max-width: 960px) {
-				.kael {
-					height: 55em;
-					background-position: bottom;
-					background-size: cover;
-					background-image: linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0)), url(img/background-kael-m.jpg);
-				}
+			.kael {
+				height: 55em;
+				background-position: bottom;
+				background-size: cover;
+				background-image: linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0)), url(img/background-kael-m.jpg);
+			}
 			.kaelstory {
-					padding: 5% 10%;
-					width: 80%;
-					max-width: 80%;
-				}
+				padding: 5% 10%;
+				width: 80%;
+				max-width: 80%;
+			}
 			.profilepic {
 				background-image: url(img/profilepic-h.jpg);
 			}
+		}
 		/* video Hero */
 
 		.video {
 			background: white;
-			min-height: 23.5em;
-			height: 5em;
+			height: 30em;
 			background-size: cover;
 			background-position: center;
 			background-attachment: fixed;
+		}
+		/* Footer */
+
+		.footer {
+			width: 100%;
+			text-align: center;
+		}
+
+		.credits {
+			width: 10em;
+			margin: 0 auto;
+			filter: grayscale(100%);
 		}
 	</style>
 </head>
@@ -225,21 +244,35 @@
 		<div class="kaelstory">
 			<p class="titlecase" style="font-weight: 700; letter-spacing: -0.05em; margin: 0 0 0.4em 0;">Enumclaw,</p>
 			<p style="margin-bottom: 0.5em;">There is something magical about this town - something only a lucky few of us get to partake in every day.</p>
-			<p> It's more than a place to live, it's a place where people can live together. A town where grocery shopping
-			is the same as social hour. Where following a tractor is part of the daily commute and a place where Kids can still ride their bikes downtown.
-			<strong>I love Enumclaw.</strong>
+			<p> It's more than a place to live, it's a place where people can live together. A town where grocery shopping is the same
+				as social hour. Where following a tractor is part of the daily commute and a place where Kids can still ride their bikes
+				downtown.
+				<strong>I love Enumclaw.</strong>
 			</p>
 			<p class="titlecase cursive" style="font-size: 3.75em; margin: 0.5em 0 -0.1em 0; text-align: right">Kael Johnson</p>
-			<p style="text-align: right">Vote Kael Johnson City Council #3</p>
+			<p style="text-align: right">Vote Kael Johnson City Council &num;3</p>
 
-		<!-- <div class="profilepic mobile"></div> -->
+			<!-- <div class="profilepic mobile"></div> -->
 
-	</div>
+		</div>
 	</div>
 	<div class="hero video">
 		<div style="margin:0 auto; text-align: center; width: 100%;">
 			<img src="img/youtube.jpg" style="width: 35%; margin: 4em 0 1em 0;">
 		</div>
+	</div>
+	<div class="sidecar">
+		<div class="sidekick intouch">
+
+		</div>
+		<div class="sidekick donate">
+
+		</div>
+	</div>
+	<div class="footer">
+		<a href="http://kevdoy.com">
+			<img class="credits" src="img/kevdoysite.gif" alt="A KevDoy Site">
+		</a>
 	</div>
 	<script>
 		(function () {
