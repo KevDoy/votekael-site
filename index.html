@@ -270,8 +270,8 @@
 		</div>
 	</div>
 	<div class="footer">
-		<a href="http://kevdoy.com">
-			<img class="credits" src="img/kevdoysite.gif" alt="A KevDoy Site">
+		<a href="http://kevdoy.com?ref=kael">
+			<img class="credits" src="img/kevdoysite-00.gif" alt="A KevDoy Site">
 		</a>
 	</div>
 	<script>
@@ -291,6 +291,15 @@
 			showNextQuote();
 
 		})();
+	</script>
+	<!-- Credit Image Hover -->
+<script  type='text/javascript'>
+$(document).ready(function(){
+    $(".credits").hover(
+        function() {$(this).attr("src","img/kevdoysite-02.gif");},
+        function() {$(this).attr("src","img/kevdoysite-01.gif");
+    });
+});
 	</script>
 </body>
 
