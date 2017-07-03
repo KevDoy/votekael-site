@@ -5,6 +5,7 @@ body {
 			background: white;
 			margin: 0;
 			padding: 0;
+	font-family: 'Roboto', Helvetica, Arial, sans-serif;
 		}
 
 		.noselect {
@@ -223,12 +224,19 @@ body {
 		/* Sidekicks */
 		.sidekick {
 			width: 40%;
-			margin: 0 1% 0 4%;
 			text-align: center;
 			display: inline-block;
 		}
+.divider {
+	width: 2%;
+	display: inline-block;
+	
+}
 		.sidecar {
-			width: 100%;
+			padding: 0 4%;
+			width: 92%;
+			max-width: 1200;
+			margin: 0 auto;
 			height: 5em;
 			background: rgba(101,101,101,0.35)
 		}
