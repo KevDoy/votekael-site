@@ -70,7 +70,7 @@ body {
 			background-image: linear-gradient( rgba(255, 255, 255, 0.35),
 			rgba(255, 255, 255, 0.35)), url(img/background-trees-2-blur.jpg);
 			background-repeat: no-repeat;
-			@include background-size(cover);
+			background-size: cover;
 			background-attachment: fixed;
 			background-position: top;
 		}
@@ -222,39 +222,79 @@ body {
 		}
 		
 		/* Sidekicks */
+footer {
+	background-image: url(img/bg-footer.jpg), linear-gradient(rgba(255,255,255,1), rgba(255,255,255,1));
+	background-size: cover;
+	background-position: bottom;
+	height: auto;
+
+}
+.donate {
+	float: left;
+}
 		.sidekick {
-			width: 40%;
+			width: 48%;
 			text-align: center;
 			display: inline-block;
+			padding: 5em 0;
 		}
-.divider {
-	width: 2%;
-	display: inline-block;
+		.divider {
+			width: 2%;
+			height: auto;
+			display: inline-block;
+			
 	
+		}
+.divider-img {
+	background-image: url(img/divider.jpg);
+			background-position: center;
+			background-repeat: no-repeat;
+	height: 100%;
 }
 		.sidecar {
 			padding: 0 4%;
 			width: 92%;
-			max-width: 1200;
+			max-width: 1750px;
 			margin: 0 auto;
-			height: 5em;
-			background: rgba(101,101,101,0.35)
+			height: auto;
 		}
 		
 		@media screen and (max-width: 960px) {
+			footer {
+				height: 55em;
+			}
 			.sidekick {
 				width: 100%;
 				margin: 0;
 			}
+			.sidecar {
+			padding: 0 4%;
+			width: 92%;
+			}
 			
 		}
+		/* Social */
+.social {
+	opacity: 0.65;
+	margin: 0 0.5em;
+}
+.social img {
+	width: 3em;
+}
+.social:hover {
+	opacity: 1;
+}
 		
 		/* Footer */
 
-		.footer {
+		.copyright {
+			padding: 1em 0;
 			width: 100%;
 			text-align: center;
 		}
+.copyright a {
+	color: black;
+}
 
 		.credits {
 			width: 6em;
