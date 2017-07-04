@@ -264,6 +264,21 @@ footer {
 
 /* Social */
 
+.register {
+	padding: 1em;
+	width: 10em;
+	background: black;
+	color: white;
+	opacity: 0.65;
+	margin: 0 auto;
+	margin-bottom: 1em;
+	border-radius: 5px
+}
+
+.register:hover {
+	opacity: 1;
+}
+
 .social {
 	opacity: 0.65;
 	margin: 0 0.5em;
