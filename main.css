@@ -216,9 +216,10 @@ header {
 /* Sidekicks */
 
 footer {
-	background-image: url(img/bg-footer.jpg), linear-gradient(rgba(255, 255, 255, 1), rgba(255, 255, 255, 1));
+	background-image: url(img/bg-footer-kael.jpg), linear-gradient(rgba(255, 255, 255, 1), rgba(255, 255, 255, 1));
 	background-size: cover;
-	background-position: bottom;
+	background-position: top;
+	background-attachment: fixed;
 	height: auto;
 }
 .donate {
