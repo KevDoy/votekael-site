@@ -152,6 +152,24 @@ body {
 	visibility: hidden;
 }
 
+.desktop {
+	display: block;
+	visibility: visible;
+}
+
+@media screen and (max-width: 960px) {
+.mobile {
+	display: block;
+	visibility: visible;
+}
+
+.desktop {
+	display: none;
+	visibility: hidden;
+}
+
+}
+
 /* Header */
 
 header {
