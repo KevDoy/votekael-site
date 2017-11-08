@@ -67,6 +67,7 @@ header{background:rgba(255, 255, 255, 1);width:100%;z-index:1000;box-shadow:0 3p
 footer{background-image:url(img/bg-footer-kael.jpg), linear-gradient(rgba(255, 255, 255, 1), rgba(255, 255, 255, 1));background-size:cover;background-position:top;background-attachment:fixed;height:auto;}
 .donate{float:left;}
 .sidekick{width:48%;text-align:center;display:inline-block;padding:5em 0;}
+.intouch{height: 15em}
 .divider{width:2%;height:auto;display:inline-block;}
 .divider-img{background-image:url(img/divider.jpg);background-position:center;background-repeat:no-repeat;height:100%;}
 .sidecar{padding:0 4%;width:92%;max-width:1750px;margin:0 auto;height:auto;}
@@ -79,7 +80,7 @@ footer{background-image:url(img/bg-footer-kael.jpg), linear-gradient(rgba(255, 2
 .social{opacity:0.65;margin:0 0.5em;}
 .social img{width:3em;}
 .social:hover{opacity:1;}
-.copyright{padding:1em 0;width:100%;text-align:center;}
+.copyright{padding:1em 0;width:100%;text-align:center; float:clear}
 .copyright a{color:black;}
 .credits{width:6em;margin:0 auto;filter:grayscale(100%);}
 #mc_embed_signup form {text-align:center; padding:10px 0 10px 0;}
